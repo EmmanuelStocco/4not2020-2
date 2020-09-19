@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-module.exports = uri => {
+module.exports = uri => { //pacotes instalados direto pelo terminal n precisa exportar, nesse caso precisa
     mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
