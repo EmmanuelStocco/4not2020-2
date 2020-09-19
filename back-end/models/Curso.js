@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
-
-const esquema = mongoose.Schema({
+//trazer o bd para a aplicação
+const esquema = mongoose.Schema({ //Schema armazena metadados(informações da propria tabela) além dos dados axes que bd como mongoo armazena 
     nome: {
         type: String,
-        required: true
+        required: true //true para ser obrigatorio - requirida
     },
     ementa: {
         type: String,
-        required: true
+        required: true 
     },
     carga_horaria: {
         type: Number,
@@ -18,7 +18,7 @@ const esquema = mongoose.Schema({
     nivel: {
         type: String,
         required: true,
-        enum: ['Básico', 'Intermediário', 'Avançado']
+        enum: ['Básico', 'Intermediário', 'Avançado']//conjunto de valores aceitos - enum
     },
     valor_curso: {
         type: Number,
