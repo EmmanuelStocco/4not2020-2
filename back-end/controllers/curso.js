@@ -51,7 +51,7 @@ controller.novo = async (req, res) => {
 }
 
 // Operação RETRIEVE (all), função listar()
-controller.listar = async (req, res) => {
+controller.listar = async (req, res) => { //async tem q ser declarado para o await funcionar
     try {
         let dados = await Curso.find() // Traz todos os cursos cadastrados
         res.send(dados) // Vai com status HTTP 200: OK
@@ -67,7 +67,7 @@ controller.obterUm = async (req, res) => {
     try {
         // Capturando o parâmetro id da URL
         const id = req.params.id
-        let obj = await Curso.findById(id)
+        let obj = await Curso.findById(id)//findById busca um no bd e joga na variavel
 
         // O objeto existe e foi encontrado
         if(obj) res.send(obj)       // HTTP 200
