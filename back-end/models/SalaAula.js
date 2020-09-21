@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const esquema = mongoose.Schema({
+const esquema = mongoose.Schema({//esquema colocamos nossas variaveis
     nome: { type: String, required: true },
     capacidade: { type: Number, default: 20 },
     recursos_didaticos: { type: String }
